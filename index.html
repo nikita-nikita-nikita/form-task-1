@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form</title>
+</head>
+<body>
+<main>
+    <!--    the left side block with bg image -->
+    <div class="bg-left-side">
+    </div>
+    <div class="text-content">
+        <header><h3>Join the community!</h3></header>
+        <div class="main-content">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam exercitationem harum ipsam nostrum optio
+                qui ratione similique, sint voluptate voluptatibus. Consequatur hic labore minus molestias nam provident
+                tempore unde ut?
+            </p>
+        </div>
+        <footer>
+            <span>
+
+            </span>
+        </footer>
+    </div>
+    <form class="form">
+        <img src="" alt="calendar">
+        <div class="input-container">
+            <label for="email-input">Email address</label>
+            <input type="email" name="email" required id="email-input">
+        </div>
+        <div class="input-container">
+            <label for="password-input">Password</label>
+            <input type="password" name="password" required id="password-input">
+        </div >
+        <div class="input-container">
+            <label for="full-name-input">Full name</label>
+            <input type="email" name="name" required id="full-name-input">
+        </div>
+        <div class="input-container date-inputs">
+            <label for="date-inputs">Date of birth</label>
+            <div id="date-inputs">
+                <div class="date-input month-input">
+                    <label for="month-select" class="date-input">month</label>
+                    <select name="month" id="month-select">
+                        <option value="1">January</option>
+                        <option value="2">February</option>
+                        <option value="3">March</option>
+                        <option value="4">April</option>
+                        <option value="5">May</option>
+                        <option value="6">June</option>
+                        <option value="7">July</option>
+                        <option value="8">August</option>
+                        <option value="9">September</option>
+                        <option value="10">October</option>
+                        <option value="11">November</option>
+                        <option value="12">December</option>
+                    </select>
+                </div>
+                <div class="date-input day-input">
+                    <label for="day-input" class="date-input">month</label>
+                    <input type="number" name="day" id="day-input">
+                </div>
+                <div class="date-input year-input">
+                    <label for="year-input" class="date-input">month</label>
+                    <input type="number" name="year" id="year-input" min="1900" max="2020">
+                </div>
+            </div>
+        </div>
+        <div class="input-container">
+            <label for="genders-buttons">Gender</label>
+            <div id="genders-buttons">
+                <input type="radio" id="gender-male" name="gender" value="male"><label for="gender-male">Male</label>
+                <input type="radio" id="gender-female" name="gender" value="female"><label for="gender-female">Female</label>
+            </div>
+        </div>
+        <div class="input-container">
+            <input type="radio" id="terms-of-use-checkbox" name="gender" value="male"> <label for="terms-of-use-checkbox">I agree with Terms and Conditions</label>
+        </div>
+        <button type="submit">Create my account</button>
+    </form>
+</main>
+</body>
+</html>
