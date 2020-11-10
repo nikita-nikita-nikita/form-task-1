@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Form</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap">
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
     <link rel="stylesheet" href="global.css">
     <link rel="stylesheet" href="build/left-side-content.css">
@@ -13,7 +13,7 @@
 <main>
     <div class="left-side-container  bg-left-side">
         <div class="text-content">
-            <header><h3>Join the community!</h3></header>
+            <header><span>Join the community!</span></header>
             <div class="main-content">
                 <p>
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis, ducimus? Harum eaque adipisci
@@ -38,19 +38,19 @@
     <div class="right-side-content">
         <form class="form">
             <img src="images/calendar.svg" alt="calendar">
-            <div class="input-container">
+            <section class="input-container">
                 <input type="text" name="email" required id="email-input">
                 <label for="email-input" class="moving-label">Email address</label>
-            </div>
-            <div class="input-container">
+            </section>
+            <section class="input-container">
                 <input type="password" name="password" required id="password-input">
                 <label for="password-input" class="moving-label">Password</label>
-            </div>
-            <div class="input-container">
+            </section>
+            <section class="input-container">
                 <input type="text" name="name" required id="full-name-input">
                 <label for="full-name-input" class="moving-label">Full name</label>
-            </div>
-            <div class="input-container date-inputs-container">
+            </section>
+            <section class="input-container date-inputs-container">
                 <label for="date-inputs">Date of birth</label>
                 <div id="date-inputs">
                     <div class="date-input month-input">
@@ -80,20 +80,24 @@
                         <label for="year-input" class="date-input-label"></label>
                     </div>
                 </div>
-            </div>
-            <div class="input-container">
+            </section>
+            <section class="input-container gender-inputs-container">
                 <label for="genders-buttons">Gender</label>
                 <div id="genders-buttons">
-                    <input type="radio" id="gender-male" name="gender" value="male"><label
-                        for="gender-male">Male</label>
-                    <input type="radio" id="gender-female" name="gender" value="female"><label
-                        for="gender-female">Female</label>
+                    <section>
+                        <input type="radio" id="gender-male" name="gender" value="male">
+                        <label for="gender-male">Male</label>
+                    </section>
+                    <section>
+                        <input type="radio" id="gender-female" name="gender" value="female">
+                        <label for="gender-female">Female</label>
+                    </section>
                 </div>
-            </div>
-            <div class="input-container">
-                <input type="radio" id="terms-of-use-checkbox" name="gender" value="male"> <label
+            </section>
+            <section class="input-container">
+                <input type="checkbox" id="terms-of-use-checkbox" name="terms" value="male"> <label
                     for="terms-of-use-checkbox">I agree with Terms and Conditions</label>
-            </div>
+            </section>
             <button type="submit">Create my account</button>
         </form>
     </div>

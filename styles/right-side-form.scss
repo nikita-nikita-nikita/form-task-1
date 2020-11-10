@@ -11,7 +11,7 @@ main{
       flex-direction: column;
       justify-content: center;
       width: 386px;
-      div.input-container{
+      section.input-container{
 
         //default stuff
         margin-top: 40px;
@@ -52,11 +52,11 @@ main{
 
         // date inputs
         &.date-inputs-container{
+          display: flex;
+          flex-direction: column;
           &>label{
             margin-bottom: 10px;
           }
-          display: flex;
-          flex-direction: column;
           #date-inputs{
             display: flex;
             justify-content: space-between;
@@ -72,6 +72,33 @@ main{
             .year-input{
               width: 99px;
             }
+          }
+        }
+
+        // gender radio buttons
+
+        &.gender-inputs-container{
+          &>label{
+            display: block;
+            margin-bottom: 10px;
+          }
+          #genders-buttons{
+            section{
+              display: inline-flex;
+              align-items: center;
+              margin-right: 15px;
+              input{
+                width: auto;
+                height: 18px;
+                margin-right: 14px;
+                font-weight: 700;
+              }
+              label{
+                color: #333333;
+                width: 57px;
+              }
+            }
+
           }
         }
       }
