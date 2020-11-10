@@ -12,20 +12,15 @@ main{
       justify-content: center;
       width: 386px;
       div.input-container{
+
+        //default stuff
+        margin-top: 40px;
         position: relative;
         label{
           font-size: 0.875rem;
           color: #555555;
         }
-        .moving-label{
-          position: absolute;
-          bottom: 20px;
-          transform: translateY(50%);
-          left: 5px;
-          transition: 0.3s ease;
-        }
-        input{
-          margin-top: 41px;
+        input, select{
           box-sizing: border-box;
           height: 40px;
           width: 100%;
@@ -37,10 +32,46 @@ main{
             outline: none;
             border-color: #6E6E6E;
           }
+        }
+
+        //moving labels
+        input{
+          &~.moving-label{
+            position: absolute;
+            bottom: 20px;
+            transform: translateY(50%);
+            left: 5px;
+            transition: 0.3s ease;
+          }
           &:focus, &:valid{
-              &~.moving-label{
-                transform: translateY(calc(-50% - 20px)) translateX(-5px);
-              }
+            &~.moving-label{
+              transform: translateY(calc(-50% - 20px)) translateX(-5px);
+            }
+          }
+        }
+
+        // date inputs
+        &.date-inputs-container{
+          &>label{
+            margin-bottom: 10px;
+          }
+          display: flex;
+          flex-direction: column;
+          #date-inputs{
+            display: flex;
+            justify-content: space-between;
+            .date-input{
+              color: #A6A6A6;
+            }
+            .month-input{
+              width: 189px;
+            }
+            .day-input{
+              width: 69px;
+            }
+            .year-input{
+              width: 99px;
+            }
           }
         }
       }

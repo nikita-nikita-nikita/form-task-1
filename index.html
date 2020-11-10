@@ -50,12 +50,12 @@
                 <input type="text" name="name" required id="full-name-input">
                 <label for="full-name-input" class="moving-label">Full name</label>
             </div>
-            <div class="input-container date-inputs">
+            <div class="input-container date-inputs-container">
                 <label for="date-inputs">Date of birth</label>
                 <div id="date-inputs">
                     <div class="date-input month-input">
-                        <label for="month-select" class="date-input">month</label>
-                        <select name="month" id="month-select">
+                        <select name="month" id="month-select" required>
+                            <option value="">Month</option>
                             <option value="1">January</option>
                             <option value="2">February</option>
                             <option value="3">March</option>
@@ -69,14 +69,15 @@
                             <option value="11">November</option>
                             <option value="12">December</option>
                         </select>
+                        <label for="month-select" class="date-input-label"></label>
                     </div>
                     <div class="date-input day-input">
-                        <label for="day-input" class="date-input">month</label>
-                        <input type="number" name="day" id="day-input">
+                        <input type="number" name="day" id="day-input" min="1" max="31" required placeholder="Day">
+                        <label for="day-input" class="date-input-label"></label>
                     </div>
                     <div class="date-input year-input">
-                        <label for="year-input" class="date-input">month</label>
-                        <input type="number" name="year" id="year-input" min="1900" max="2020">
+                        <input type="number" name="year" required id="year-input" min="1900" max="2020" placeholder="Year">
+                        <label for="year-input" class="date-input-label"></label>
                     </div>
                 </div>
             </div>
