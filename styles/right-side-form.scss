@@ -1,105 +1,152 @@
-main{
-  .right-side-content{
+main {
+  .right-side-content {
     width: 50%;
     display: flex;
     align-items: center;
     height: 100%;
     margin-left: 50px;
-    form.form{
+
+    form.form {
       height: 100%;
       display: flex;
       flex-direction: column;
       justify-content: center;
       width: 386px;
-      section.input-container{
+
+      section.input-container {
 
         //default stuff
-        margin-top: 40px;
+        margin-top: 30px;
         position: relative;
-        label{
+
+        label {
           font-size: 0.875rem;
           color: #555555;
         }
-        input, select{
+
+        input, select {
           box-sizing: border-box;
           height: 40px;
           width: 100%;
           border: 1px solid #C6C6C6;
           border-radius: 5px;
           background: #FFFFFF;
-          transition: 0.3s ease;
-          &:focus{
+          transition: 0.15s ease;
+
+          &:focus {
             outline: none;
             border-color: #6E6E6E;
           }
         }
 
         //moving labels
-        input{
-          &~.moving-label{
+        input {
+          & ~ .moving-label {
             position: absolute;
             bottom: 20px;
             transform: translateY(50%);
             left: 5px;
-            transition: 0.3s ease;
+            transition: 0.15s ease;
           }
-          &:focus, &:valid{
-            &~.moving-label{
+
+          &:focus, &:valid {
+            & ~ .moving-label {
               transform: translateY(calc(-50% - 20px)) translateX(-5px);
             }
           }
         }
 
         // date inputs
-        &.date-inputs-container{
+        &.date-inputs-container {
           display: flex;
           flex-direction: column;
-          &>label{
+
+          & > label {
             margin-bottom: 10px;
           }
-          #date-inputs{
+
+          #date-inputs {
             display: flex;
             justify-content: space-between;
-            .date-input{
+
+            .date-input {
               color: #A6A6A6;
             }
-            .month-input{
+
+            .month-input {
               width: 189px;
             }
-            .day-input{
+
+            .day-input {
               width: 69px;
             }
-            .year-input{
+
+            .year-input {
               width: 99px;
             }
           }
         }
 
         // gender radio buttons
-
-        &.gender-inputs-container{
-          &>label{
+        &.gender-inputs-container {
+          & > label {
             display: block;
             margin-bottom: 10px;
           }
-          #genders-buttons{
-            section{
+
+          #genders-buttons {
+            section {
               display: inline-flex;
               align-items: center;
               margin-right: 15px;
-              input{
+
+              input {
                 width: auto;
                 height: 18px;
                 margin-right: 14px;
                 font-weight: 700;
               }
-              label{
+
+              label {
                 color: #333333;
                 width: 57px;
               }
             }
 
           }
+        }
+
+        // terms checkbox
+        &.terms-checkbox-container {
+          display: flex;
+          align-items: center;
+
+          input {
+            display: inline;
+            width: 18px;
+            height: 18px;
+            margin-right: 14px;
+          }
+        }
+      }
+
+      // submit button
+      button {
+        margin-top: 25px;
+        border-radius: 5px;
+        background: #8889B9;
+        font-weight: 500;
+        border: none;
+        color: white;
+        padding: 12px 0;
+
+        &:focus {
+          outline: none
+        }
+
+        &:hover{
+          filter: brightness(90%);
+          cursor: pointer;
         }
       }
     }
