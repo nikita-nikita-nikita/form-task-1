@@ -24,6 +24,27 @@ main {
           color: #555555;
         }
 
+        .error-text{
+          display: none;
+          color: #EA4989;
+          font-size: 0.7rem;
+          position: absolute;
+          top: 30px;
+          left: 14px;
+        }
+
+        &.error{
+          .error-text{
+            display: block;
+          }
+          label{
+            color: #EA4989;
+          }
+          input{
+            border-color: #EA4989!important;
+          }
+        }
+
         input, select {
           padding-left: 14px;
           box-sizing: border-box;
