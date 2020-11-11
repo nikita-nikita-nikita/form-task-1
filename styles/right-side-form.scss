@@ -25,6 +25,7 @@ main {
         }
 
         input, select {
+          padding-left: 14px;
           box-sizing: border-box;
           height: 40px;
           width: 100%;
@@ -45,14 +46,17 @@ main {
             position: absolute;
             bottom: 20px;
             transform: translateY(50%);
-            left: 5px;
+            left: 10px;
             transition: 0.15s ease;
             cursor: text;
+            background-color: #FFFFFF;
+            padding: 0 5px;
           }
 
-          &:focus, &:valid {
+          &:focus, &:valid{
             & ~ .moving-label {
-              transform: translateY(calc(-50% - 20px)) translateX(-5px);
+              background: #FFFFFF;
+              transform: translateY(calc(-50% - 5px)) scale(0.8) translateX(-10%);
               cursor: default;
             }
           }
