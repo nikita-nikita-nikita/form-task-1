@@ -13,13 +13,13 @@ main {
       justify-content: center;
       width: 386px;
 
-      section.input-container {
+      div.input-container {
 
         //default stuff
         margin-top: 30px;
         position: relative;
 
-        label {
+        label, span {
           font-size: 0.875rem;
           color: #555555;
         }
@@ -164,7 +164,7 @@ main {
           }
 
           #genders-buttons {
-            section {
+            div {
               display: inline-flex;
               align-items: center;
               margin-right: 15px;

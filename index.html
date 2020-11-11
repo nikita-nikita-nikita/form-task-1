@@ -39,24 +39,24 @@
     <div class="right-side-content">
         <form class="form">
             <img src="images/calendar.svg" alt="calendar">
-            <section class="input-container">
+            <div class="input-container">
                 <input type="text" name="email" required id="email-input">
                 <label for="email-input" class="moving-label">Email address</label>
                 <p class="error-text">Enter valid email address</p>
-            </section>
-            <section class="input-container">
+            </div>
+            <div class="input-container">
                 <input type="password" name="password" required id="password-input">
                 <label for="password-input" class="moving-label">Password</label>
                 <p class="error-text">Enter valid password</p>
                 <button type="button" class="show-password-btn">show</button>
-            </section>
-            <section class="input-container">
+            </div>
+            <div class="input-container">
                 <input type="text" name="name" required id="full-name-input">
                 <label for="full-name-input" class="moving-label">Full name</label>
                 <p class="error-text">Enter valid full name</p>
-            </section>
-            <section class="input-container date-inputs-container">
-                <label for="date-inputs">Date of birth</label>
+            </div>
+            <div class="input-container date-inputs-container">
+                <span >Date of birth</span>
                 <div id="date-inputs" class="main-section-input-content">
                     <div class="date-input month-input">
                         <select name="month" id="month-select" required>
@@ -86,24 +86,24 @@
                     </div>
                     <p class="error-text">Enter valid date</p>
                 </div>
-            </section>
-            <section class="input-container gender-inputs-container">
-                <label for="genders-buttons">Gender</label>
+            </div>
+            <div class="input-container gender-inputs-container">
+                <span >Gender</span>
                 <div id="genders-buttons">
-                    <section>
+                    <div>
                         <input type="radio" id="gender-male" name="gender" value="male">
                         <label for="gender-male">Male</label>
-                    </section>
-                    <section>
+                    </div>
+                    <div>
                         <input type="radio" id="gender-female" name="gender" value="female">
                         <label for="gender-female">Female</label>
-                    </section>
+                    </div>
                 </div>
-            </section>
-            <section class="input-container terms-checkbox-container">
+            </div>
+            <div class="input-container terms-checkbox-container">
                 <input type="checkbox" id="terms-of-use-checkbox" name="terms" value="male" required>
                 <label for="terms-of-use-checkbox">I agree with Terms and Conditions</label>
-            </section>
+            </div>
             <button type="submit">Create my account</button>
         </form>
     </div>
