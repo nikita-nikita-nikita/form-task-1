@@ -1,0 +1,11 @@
+@media screen and (max-width: 1920px){
+  main>.right-side-content{
+    justify-content: center;
+  }
+  main>.left-side-container{
+    justify-content: center;
+  }
+  main>.left-side-container,main>.right-side-content{
+    padding: 0;
+  }
+}
