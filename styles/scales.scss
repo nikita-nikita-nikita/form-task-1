@@ -24,9 +24,8 @@
 
     form.form {
       width: 355px;
-      section.input-container.date-inputs-container > #date-inputs {
+      div.input-container.date-inputs-container > #date-inputs {
         display: flex;
-        justify-content: space-between;
         flex-wrap: wrap;
 
         .month-input {
@@ -53,7 +52,7 @@
       box-sizing: border-box;
       margin: 0 15px;
       width: 100%;
-      section.input-container.date-inputs-container > #date-inputs{
+      div.input-container.date-inputs-container > #date-inputs{
         .day-input {
           width: 39.15%;
         }
