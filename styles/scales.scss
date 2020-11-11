@@ -1,11 +1,67 @@
-@media screen and (max-width: 1920px){
-  main>.right-side-content{
+// hd
+@media screen and (max-width: 1280px) {
+  main > .right-side-content {
     justify-content: center;
   }
-  main>.left-side-container{
+  main > .left-side-container {
     justify-content: center;
   }
-  main>.left-side-container,main>.right-side-content{
+  main > .left-side-container, main > .right-side-content {
     padding: 0;
+  }
+  main {
+    height: 720px;
+  }
+}
+
+// mobile
+@media screen and (max-width: 800px) {
+  main > .left-side-container {
+    display: none;
+  }
+  main > .right-side-content {
+    width: 100%;
+
+    form.form {
+      width: 355px;
+      section.input-container.date-inputs-container > #date-inputs {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        .month-input {
+          width: 100%;
+          margin-bottom: 23px;
+        }
+
+        .day-input {
+          width: 139px;
+        }
+
+        .year-input {
+          width: 197px;
+        }
+
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 416px) {
+  main>.right-side-content {
+    form.form {
+      box-sizing: border-box;
+      margin: 0 15px;
+      width: 100%;
+      section.input-container.date-inputs-container > #date-inputs{
+        .day-input {
+          width: 39.15%;
+        }
+
+        .year-input {
+          width: 55.49%;
+        }
+      }
+    }
   }
 }

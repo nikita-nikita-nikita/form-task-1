@@ -122,8 +122,11 @@ main {
             justify-content: space-between;
 
             .date-input {
-              &::placeholder{
-                color: #A6A6A6;
+              input, select {
+                &::placeholder {
+                  color: #A6A6A6;
+                }
+                box-sizing: border-box;
               }
             }
 

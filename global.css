@@ -2,13 +2,15 @@ main {
   display: flex;
   align-items: flex-start;
   justify-content: center;
+  /* Of course height must be absolute, when page has more elements*/
   height: 100%;
 }
-html{
-  height: 100%;
+:root{
   font-family: 'Montserrat', sans-serif;
 }
 body{
   height: 100%;
 }
-
+html{
+  height: 100%;
+}
