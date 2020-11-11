@@ -29,8 +29,8 @@ main {
           color: #EA4989;
           font-size: 0.7rem;
           position: absolute;
-          top: 30px;
           left: 14px;
+          top: calc(100% - 5px);
         }
 
         &.error{
@@ -40,7 +40,7 @@ main {
           label{
             color: #EA4989;
           }
-          input{
+          input, select{
             border-color: #EA4989!important;
           }
         }
