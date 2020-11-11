@@ -1,0 +1,38 @@
+main {
+  .left-side-container {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    &.bg-left-side {
+      background-image: url("../images/bg.png");
+      background-color: #A85368;
+      background-size: cover;
+    }
+
+    .text-content {
+      padding-right: 50px;
+      text-align: right;
+      color: white;
+      width: 386px;
+
+      header {
+        font-size: 2.25rem;
+        margin-top: 0;
+        font-weight: 700;
+        margin-bottom: 100px;
+      }
+
+      .main-content {
+        font-size: 1.125rem;
+        margin-bottom: 100px;
+      }
+
+      small {
+        font-size: 0.75rem;
+      }
+    }
+  }
+}
