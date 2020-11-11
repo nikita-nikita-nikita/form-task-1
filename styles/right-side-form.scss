@@ -4,7 +4,7 @@ main {
     display: flex;
     align-items: center;
     height: 100%;
-    margin-left: 50px;
+    padding-left: 50px;
 
     form.form {
       height: 100%;
@@ -29,8 +29,8 @@ main {
           color: #EA4989;
           font-size: 0.7rem;
           position: absolute;
-          left: 14px;
-          top: calc(100% - 5px);
+          right: 14px;
+          bottom: 30px;
         }
 
         &.error{
@@ -42,6 +42,12 @@ main {
           }
           input, select{
             border-color: #EA4989!important;
+          }
+          .main-section-input-content{
+            position: relative;
+            .error-text{
+              bottom: 100%;
+            }
           }
         }
 
@@ -59,6 +65,23 @@ main {
             outline: none;
             border-color: #6E6E6E;
           }
+        }
+
+        // show password button
+        .show-password-btn{
+          color: #C6C6C6;
+          background: none;
+          border: none;
+          font-size: 10px;
+          margin: 0;
+          padding: 0;
+          &:focus{
+            outline: none;
+          }
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          right: 14px;
         }
 
         //moving labels

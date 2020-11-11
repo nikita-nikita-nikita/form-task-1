@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="global.css">
     <link rel="stylesheet" href="build/left-side-content.css">
     <link rel="stylesheet" href="build/right-side-form.css">
+    <link rel="stylesheet" href="build/scales.css">
 </head>
 <body>
 <main>
@@ -47,6 +48,7 @@
                 <input type="password" name="password" required id="password-input">
                 <label for="password-input" class="moving-label">Password</label>
                 <p class="error-text">Enter valid password</p>
+                <button type="button" class="show-password-btn">show</button>
             </section>
             <section class="input-container">
                 <input type="text" name="name" required id="full-name-input">
@@ -55,7 +57,7 @@
             </section>
             <section class="input-container date-inputs-container">
                 <label for="date-inputs">Date of birth</label>
-                <div id="date-inputs">
+                <div id="date-inputs" class="main-section-input-content">
                     <div class="date-input month-input">
                         <select name="month" id="month-select" required>
                             <option value="">Month</option>
@@ -82,8 +84,8 @@
                         <input type="number" name="year" required id="year-input" min="1900" max="2020" placeholder="Year">
                         <label for="year-input" class="date-input-label"></label>
                     </div>
+                    <p class="error-text">Enter valid date</p>
                 </div>
-                <p class="error-text">Enter valid full name</p>
             </section>
             <section class="input-container gender-inputs-container">
                 <label for="genders-buttons">Gender</label>

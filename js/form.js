@@ -54,6 +54,20 @@ function isLeap(year){
 
 const errors = [];
 
+const showPasswordButton = document.querySelector('.show-password-btn');
+showPasswordButton.addEventListener('mousedown', () => {
+    const passwordInput = document.querySelector('#password-input');
+    passwordInput.type = 'text'
+});
+showPasswordButton.addEventListener('mouseup', () => {
+    const passwordInput = document.querySelector('#password-input');
+    passwordInput.type = 'password'
+});
+showPasswordButton.addEventListener('mouseout', () => {
+    const passwordInput = document.querySelector('#password-input');
+    passwordInput.type = 'password'
+});
+
 form.addEventListener('submit', event =>{
     event.preventDefault();
     const formData = new FormData(event.target);
