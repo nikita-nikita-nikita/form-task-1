@@ -30,7 +30,9 @@ main {
           font-size: 0.7rem;
           position: absolute;
           right: 14px;
-          bottom: 30px;
+          bottom: 45px;
+          padding: 0;
+          margin: 0;
         }
 
         &.error{
@@ -46,7 +48,7 @@ main {
           .main-section-input-content{
             position: relative;
             .error-text{
-              bottom: 100%;
+              bottom: calc(100% + 10px);
             }
           }
         }
