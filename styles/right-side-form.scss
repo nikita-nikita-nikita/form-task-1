@@ -47,11 +47,13 @@ main {
             transform: translateY(50%);
             left: 5px;
             transition: 0.15s ease;
+            cursor: text;
           }
 
           &:focus, &:valid {
             & ~ .moving-label {
               transform: translateY(calc(-50% - 20px)) translateX(-5px);
+              cursor: default;
             }
           }
         }
@@ -70,11 +72,25 @@ main {
             justify-content: space-between;
 
             .date-input {
-              color: #A6A6A6;
+              &::placeholder{
+                color: #A6A6A6;
+              }
             }
 
             .month-input {
               width: 189px;
+              select{
+                &:invalid{
+                  color: #A6A6A6;
+                }
+                option{
+                  color: black;
+                }
+                option[value=""]{
+                  color: #A6A6A6;
+                }
+              }
+
             }
 
             .day-input {
