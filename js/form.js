@@ -17,7 +17,6 @@ const validation = [
         validate(value){
             this.reg.forEach((reg, index) => {
                 if(!reg.test(String(value))) {
-                    console.log(index, value)
                     throw new Error(this.message);
                 }
             });
@@ -34,7 +33,6 @@ const validation = [
             year = (+year);
             month = +month;
             day = + day;
-            console.log({year, month, day})
             if(
                 (day<1 || day>31)||
                 (month<1 || month>12)||
@@ -52,7 +50,7 @@ function isLeap(year){
     return(year%100 && !(year%4) || !(year%100) && !(year%400));
 }
 
-const errors = [];
+let errors = [];
 
 const showPasswordButton = document.querySelector('.show-password-btn');
 showPasswordButton.addEventListener('mousedown', () => {
@@ -68,7 +66,12 @@ showPasswordButton.addEventListener('mouseout', () => {
     passwordInput.type = 'password'
 });
 
-form.addEventListener('submit', event =>{
+form.addEventListener('submit', event => {
+    const previousErrors = document.querySelectorAll('.error');
+    previousErrors.forEach( elem => {
+        elem.classList.remove('error');
+    });
+    errors = [];
     event.preventDefault();
     const formData = new FormData(event.target);
     validation.forEach( elem => {
@@ -86,7 +89,6 @@ form.addEventListener('submit', event =>{
                 message: error.message,
                 selectorName: elem.selectorName
             });
-            console.log(error)
         }
     });
     errors.forEach( error => {
